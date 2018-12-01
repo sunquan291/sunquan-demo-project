@@ -1,16 +1,16 @@
 package com.zte.mouse.util;
 
-import java.io.File;
-
-import javax.swing.JOptionPane;
-
 import com.melloware.jintellitype.HotkeyListener;
 import com.melloware.jintellitype.JIntellitype;
 import com.zte.mouse.action.strategy.Point;
 import com.zte.mouse.app.Launcher;
 
-public class HotKeyUtil implements HotkeyListener
-{
+import javax.swing.*;
+import java.io.File;
+import java.io.InputStream;
+import java.net.URL;
+
+public class HotKeyUtil implements HotkeyListener {
     static final int start = 88;
     static final int stop = 89;
     static final int pause = 90;
@@ -18,31 +18,25 @@ public class HotKeyUtil implements HotkeyListener
 
     private Launcher launcher;
 
-    public HotKeyUtil(Launcher launcher)
-    {
+    public HotKeyUtil(Launcher launcher) {
         this.launcher = launcher;
     }
 
-    public HotKeyUtil()
-    {
-        JIntellitype.setLibraryLocation(new File("conf/JIntellitype.dll"));
+    public HotKeyUtil() {
+        JIntellitype.setLibraryLocation(this.getClass().getResource("/").getPath() + "conf/JIntellitype64.dll");
     }
 
-    public Launcher getLauncher()
-    {
+    public Launcher getLauncher() {
         return launcher;
     }
 
-    public void setLauncher(Launcher launcher)
-    {
+    public void setLauncher(Launcher launcher) {
         this.launcher = launcher;
     }
 
     @Override
-    public void onHotKey(int key)
-    {
-        switch (key)
-        {
+    public void onHotKey(int key) {
+        switch (key) {
             case start:
                 launcher.start();
                 break;
@@ -54,13 +48,12 @@ public class HotKeyUtil implements HotkeyListener
                 destroy();
             case showCurPos:
                 Point p = PositionUtil.getCurPosition();
-                JOptionPane.showMessageDialog(null, "X=" + p.getX() + ",Y=" + p.getY(), "ÏÔÊ¾µ±Ç°Î»ÖÃ£º", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "X=" + p.getX() + ",Y=" + p.getY(), "ï¿½ï¿½Ê¾ï¿½ï¿½Ç°Î»ï¿½Ã£ï¿½", JOptionPane.INFORMATION_MESSAGE);
                 break;
         }
     }
 
-    void destroy()
-    {
+    void destroy() {
 
         JIntellitype.getInstance().unregisterHotKey(start);
         JIntellitype.getInstance().unregisterHotKey(stop);
@@ -69,8 +62,7 @@ public class HotKeyUtil implements HotkeyListener
         System.exit(0);
     }
 
-    public void initHotkey()
-    {
+    public void initHotkey() {
         JIntellitype.getInstance().registerHotKey(start, JIntellitype.MOD_SHIFT, 'S');
         JIntellitype.getInstance().registerHotKey(stop, JIntellitype.MOD_SHIFT, 'X');
         JIntellitype.getInstance().registerHotKey(pause, JIntellitype.MOD_SHIFT, 'P');

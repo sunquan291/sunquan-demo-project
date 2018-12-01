@@ -1,8 +1,13 @@
 package com.zte.mouse.app;
 
-import java.util.HashMap;
-import java.util.Map;
-
+import com.zte.mouse.action.strategy.ClickStrategy;
+import com.zte.mouse.action.strategy.DoubleClickStrategy;
+import com.zte.mouse.action.strategy.MouseAction;
+import com.zte.mouse.action.strategy.MoveStrategy;
+import com.zte.mouse.data.PositionData;
+import com.zte.mouse.task.MouseTimerTask;
+import com.zte.mouse.util.HotKeyUtil;
+import com.zte.mouse.util.PropsUtil;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -16,17 +21,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.zte.mouse.action.strategy.ClickStrategy;
-import com.zte.mouse.action.strategy.DoubleClickStrategy;
-import com.zte.mouse.action.strategy.MouseAction;
-import com.zte.mouse.action.strategy.MoveStrategy;
-import com.zte.mouse.data.PositionData;
-import com.zte.mouse.task.MouseTimerTask;
-import com.zte.mouse.util.HotKeyUtil;
-import com.zte.mouse.util.PropsUtil;
+import java.util.HashMap;
+import java.util.Map;
 
-public class MousePosSetComposite extends Composite
-{
+public class MousePosSetComposite extends Composite {
 
     private HotKeyUtil hotKeyUtil;
 
@@ -42,27 +40,24 @@ public class MousePosSetComposite extends Composite
 
     private final Map<String, Class<? extends MouseAction>> actionMap = new HashMap<String, Class<? extends MouseAction>>();
 
-    public int getTime()
-    {
+    public int getTime() {
         return time;
     }
 
-    private void initActionMap()
-    {
+    private void initActionMap() {
         actionMap.put("Move", MoveStrategy.class);
         actionMap.put("Click", ClickStrategy.class);
         actionMap.put("DoubleClick", DoubleClickStrategy.class);
     }
 
-    public MousePosSetComposite(Composite parent, int style)
-    {
+    public MousePosSetComposite(Composite parent, int style) {
         super(parent, style);
         initActionMap();
         setLayout(new GridLayout(5, false));
 
         Label label = new Label(this, SWT.NONE);
         label.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
-        label.setText("µ¸¥˙÷‹∆⁄£∫");
+        label.setText("ÂêØÂä®Âª∂Ëøü");
 
         txt_time = new Text(this, SWT.BORDER);
         txt_time.setText(PropsUtil.readValue("time"));
@@ -78,7 +73,7 @@ public class MousePosSetComposite extends Composite
 
         label_1 = new Label(this, SWT.NONE);
         label_1.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
-        label_1.setText("÷¥––Ω≈±æ£∫");
+        label_1.setText("Âä®‰ΩúÂàóË°®");
 
         txtBat = new Text(this, SWT.BORDER | SWT.WRAP | SWT.V_SCROLL | SWT.MULTI);
         GridData gd_txtBat = new GridData(SWT.FILL, SWT.FILL, true, true, 3, 2);
@@ -91,12 +86,10 @@ public class MousePosSetComposite extends Composite
 
         button = new Button(this, SWT.NONE);
         button.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, true, false, 1, 1));
-        button.addSelectionListener(new SelectionAdapter()
-        {
+        button.addSelectionListener(new SelectionAdapter() {
             @Override
-            public void widgetSelected(SelectionEvent e)
-            {
-                // –¥≈‰÷√
+            public void widgetSelected(SelectionEvent e) {
+                // –¥ÔøΩÔøΩÔøΩÔøΩ
                 writeData2ConfigFile();
                 arrangeLauncher();
                 // PropsUtil.writeDataToFile(data);
@@ -105,48 +98,39 @@ public class MousePosSetComposite extends Composite
         button.setText("\u4FDD\u5B58\u8BBE\u7F6E");
 
         btnNewButton = new Button(this, SWT.NONE);
-        btnNewButton.addSelectionListener(new SelectionAdapter()
-        {
+        btnNewButton.addSelectionListener(new SelectionAdapter() {
             @Override
-            public void widgetSelected(SelectionEvent e)
-            {
+            public void widgetSelected(SelectionEvent e) {
                 arrangeLauncher();
             }
         });
-        btnNewButton.setText("◊¢≤·Ω≈±æ");
+        btnNewButton.setText("Á´ãÂç≥ÊâßË°å");
         new Label(this, SWT.NONE);
         new Label(this, SWT.NONE);
         initHotKey();
-        // ≥ı ºªØΩ≈±æ
+        // ÔøΩÔøΩ ºÔøΩÔøΩÔøΩ≈±ÔøΩ
         initBat();
     }
 
-    private void initHotKey()
-    {
+    private void initHotKey() {
         hotKeyUtil = new HotKeyUtil();
         hotKeyUtil.initHotkey();
     }
 
-    private MouseTimerTask initTimerTask()
-    {
+    private MouseTimerTask initTimerTask() {
         MouseTimerTask timerTask = new MouseTimerTask();
         String bat = txtBat.getText();
-        try
-        {
+        try {
             JSONArray jsonArray = new JSONArray(bat);
-            for (int i = 0; i < jsonArray.length(); i++)
-            {
+            for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 MouseAction mouseAction = actionMap.get(jsonObject.get("action")).newInstance();
-                if (mouseAction instanceof MoveStrategy)
-                {
+                if (mouseAction instanceof MoveStrategy) {
                     MoveStrategy moveStrategy = (MoveStrategy) mouseAction;
                     moveStrategy.setEndPosition(Integer.parseInt(jsonObject.get("x").toString()), Integer.parseInt(jsonObject.get("y").toString()));
                     moveStrategy.setWaitTime(Integer.parseInt(jsonObject.get("delay").toString()));
                     timerTask.addStrategy(moveStrategy);
-                }
-                else if (mouseAction instanceof ClickStrategy)
-                {
+                } else if (mouseAction instanceof ClickStrategy) {
                     ClickStrategy clickStrategy = (ClickStrategy) mouseAction;
                     if (jsonObject.get("x") != null && jsonObject.get("y") != null)
                         clickStrategy.setClickPosition(Integer.parseInt(jsonObject.get("x").toString()), Integer.parseInt(jsonObject.get("y").toString()));
@@ -155,24 +139,17 @@ public class MousePosSetComposite extends Composite
                     timerTask.addStrategy(clickStrategy);
                 }
             }
-        }
-        catch (JSONException e)
-        {
+        } catch (JSONException e) {
             e.printStackTrace();
-        }
-        catch (InstantiationException e)
-        {
+        } catch (InstantiationException e) {
             e.printStackTrace();
-        }
-        catch (IllegalAccessException e)
-        {
+        } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
         return timerTask;
     }
 
-    private void arrangeLauncher()
-    {
+    private void arrangeLauncher() {
         int time = Integer.parseInt(txt_time.getText());
         Launcher launcher = new Launcher();
         MouseTimerTask timerTask = initTimerTask();
@@ -185,19 +162,16 @@ public class MousePosSetComposite extends Composite
     }
 
     @Override
-    protected void checkSubclass()
-    {
+    protected void checkSubclass() {
     }
 
-    public void writeData2ConfigFile()
-    {
+    public void writeData2ConfigFile() {
         String time = txt_time.getText();
         String bat = txtBat.getText();
         PropsUtil.writeDataToFile(time, bat);
     }
 
-    private void initBat()
-    {
+    private void initBat() {
         if (PropsUtil.readValue("time") != null)
             txt_time.setText(PropsUtil.readValue("time"));
         if (PropsUtil.readValue("bat") != null)

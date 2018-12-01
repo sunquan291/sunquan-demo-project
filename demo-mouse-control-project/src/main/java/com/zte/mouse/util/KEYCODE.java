@@ -2,427 +2,427 @@ package com.zte.mouse.util;
 
 public class KEYCODE {
 	/**
-	 * Ğ¡¼üÅÌ +
+	 * å°é”®ç›˜ +
 	 */
 	public static final int SMALL_KEY_BOARD_ADD = 16777259;
 	/**
-	 * Ğ¡¼üÅÌ -
+	 * å°é”®ç›˜ -
 	 */
 	public static final int SMALL_KEY_BOARD_SUB = 16777261;
 	/**
-	 * Ğ¡¼üÅÌ *
+	 * å°é”®ç›˜ *
 	 */
 	public static final int SMALL_KEY_BOARD_MUL = 16777258;
 	/**
-	 * Ğ¡¼üÅÌ /
+	 * å°é”®ç›˜ /
 	 */
 	public static final int SMALL_KEY_BOARD_DEV = 16777263;
 
 	/**
-	 * Ğ¡¼üÅÌ 0
+	 * å°é”®ç›˜ 0
 	 */
 
 	public static final int SMALL_KEY_BOARD_0 = 16777264;
 	/**
-	 * Ğ¡¼üÅÌ 1
+	 * å°é”®ç›˜ 1
 	 */
 
 	public static final int SMALL_KEY_BOARD_1 = 16777265;
 	/**
-	 * Ğ¡¼üÅÌ 2
+	 * å°é”®ç›˜ 2
 	 */
 
 	public static final int SMALL_KEY_BOARD_2 = 16777266;
 	/**
-	 * Ğ¡¼üÅÌ 3
+	 * å°é”®ç›˜ 3
 	 */
 
 	public static final int SMALL_KEY_BOARD_3 = 16777267;
 	/**
-	 * Ğ¡¼üÅÌ 4
+	 * å°é”®ç›˜ 4
 	 */
 
 	public static final int SMALL_KEY_BOARD_4 = 16777268;
 	/**
-	 * Ğ¡¼üÅÌ 5
+	 * å°é”®ç›˜ 5
 	 */
 
 	public static final int SMALL_KEY_BOARD_5 = 16777269;
 	/**
-	 * Ğ¡¼üÅÌ 6
+	 * å°é”®ç›˜ 6
 	 */
 
 	public static final int SMALL_KEY_BOARD_6 = 16777270;
 	/**
-	 * Ğ¡¼üÅÌ 7
+	 * å°é”®ç›˜ 7
 	 */
 
 	public static final int SMALL_KEY_BOARD_7 = 16777271;
 	/**
-	 * Ğ¡¼üÅÌ 8
+	 * å°é”®ç›˜ 8
 	 */
 
 	public static final int SMALL_KEY_BOARD_8 = 16777272;
 	/**
-	 * Ğ¡¼üÅÌ 9
+	 * å°é”®ç›˜ 9
 	 */
 
 	public static final int SMALL_KEY_BOARD_9 = 16777273;
 
 	/**
-	 * Ğ¡¼üÅÌ »Ø³µ
+	 * å°é”®ç›˜ å›è½¦
 	 */
 	public static final int SMALL_KEY_BOARD_ENTER = 16777296;
 
 	/**
-	 * Ğ¡¼üÅÌ .
+	 * å°é”®ç›˜ .
 	 */
 	public static final int SMALL_KEY_BOARD_DOT = 16777262;
 
 	/**
-	 * Ğ¡¼üÅÌ num lock
+	 * å°é”®ç›˜ num lock
 	 */
 	public static final int SMALL_KEY_BOARD_NUM_LOCK = 16777299;
 
 	/**
-	 * Ğ¡¼üÅÌ Home
+	 * å°é”®ç›˜ Home
 	 */
 	public static final int SMALL_KEY_BOARD_HOME = 16777223;
 
 	/**
-	 * Ğ¡¼üÅÌ End
+	 * å°é”®ç›˜ End
 	 */
 	public static final int SMALL_KEY_BOARD_END = 16777224;
 
 	/**
-	 * Ğ¡¼üÅÌ pause break
+	 * å°é”®ç›˜ pause break
 	 */
 	public static final int SMALL_KEY_BOARD_PAUSE_BREAK = 16777301;
 
 	/**
-	 * Ğ¡¼üÅÌ scroll lock
+	 * å°é”®ç›˜ scroll lock
 	 */
 	public static final int SMALL_KEY_BOARD_SCROLL_LOCK = 16777300;
 
 	/**
-	 * ÍË¸ñ
+	 * é€€æ ¼
 	 */
 	public static final int BACK = 8;
 	/**
-	 * ¿Õ¸ñ¼ü
+	 * ç©ºæ ¼é”®
 	 */
 	public static final int SPACE = 32;
 
 	/**
-	 * ESC¼ü
+	 * ESCé”®
 	 */
 	public static final int KEY_ESC = 27;
 	/**
-	 * F1¼ü
+	 * F1é”®
 	 */
 	public static final int KEY_F1 = 16777226;
 	/**
-	 * F2¼ü
+	 * F2é”®
 	 */
 	public static final int KEY_F2 = 16777227;
 	/**
-	 * F3¼ü
+	 * F3é”®
 	 */
 	public static final int KEY_F3 = 16777228;
 	/**
-	 * F4¼ü
+	 * F4é”®
 	 */
 	public static final int KEY_F4 = 16777229;
 	/**
-	 * F5¼ü
+	 * F5é”®
 	 */
 	public static final int KEY_F5 = 16777230;
 	/**
-	 * F6¼ü
+	 * F6é”®
 	 */
 	public static final int KEY_F6 = 16777231;
 	/**
-	 * F7¼ü
+	 * F7é”®
 	 */
 	public static final int KEY_F7 = 16777232;
 	/**
-	 * F8¼ü
+	 * F8é”®
 	 */
 	public static final int KEY_F8 = 16777233;
 	/**
-	 * F9¼ü
+	 * F9é”®
 	 */
 	public static final int KEY_F9 = 16777234;
 	/**
-	 * F10¼ü
+	 * F10é”®
 	 */
 	public static final int KEY_F10 = 16777235;
 	/**
-	 * F11¼ü
+	 * F11é”®
 	 */
 	public static final int KEY_F11 = 16777236;
 	/**
-	 * F12¼ü
+	 * F12é”®
 	 */
 	public static final int KEY_F12 = 16777237;
 	/**
-	 * `¼ü
+	 * `é”®
 	 */
 	public static final int KEY_DRIP = 96;
 	/**
-	 * 1¼ü
+	 * 1é”®
 	 */
 	public static final int NUM_1 = 49;
 	/**
-	 * 2¼ü
+	 * 2é”®
 	 */
 	public static final int NUM_2 = 50;
 	/**
-	 * 3¼ü
+	 * 3é”®
 	 */
 	public static final int NUM_3 = 51;
 	/**
-	 * 4¼ü
+	 * 4é”®
 	 */
 	public static final int NUM_4 = 52;
 	/**
-	 * 5¼ü
+	 * 5é”®
 	 */
 	public static final int NUM_5 = 53;
 	/**
-	 * 6¼ü
+	 * 6é”®
 	 */
 	public static final int NUM_6 = 54;
 	/**
-	 * 7¼ü
+	 * 7é”®
 	 */
 	public static final int NUM_7 = 55;
 	/**
-	 * 8¼ü
+	 * 8é”®
 	 */
 	public static final int NUM_8 = 56;
 	/**
-	 * 9¼ü
+	 * 9é”®
 	 */
 	public static final int NUM_9 = 57;
 	/**
-	 * 0¼ü
+	 * 0é”®
 	 */
 	public static final int NUM_0 = 48;
 	/**
-	 * -¼ü
+	 * -é”®
 	 */
 	public static final int KEY_SUB = 45;
 	/**
-	 * =¼ü
+	 * =é”®
 	 */
 	public static final int KEY_ADD = 61;
 	/**
-	 * tab¼ü
+	 * tabé”®
 	 */
 	public static final int KEY_TAB = 9;
 	/**
-	 * Q¼ü
+	 * Qé”®
 	 */
 	public static final int KEY_Q = 113;
 	/**
-	 * W¼ü
+	 * Wé”®
 	 */
 	public static final int KEY_W = 119;
 	/**
-	 * E¼ü
+	 * Eé”®
 	 */
 	public static final int KEY_E = 101;
 	/**
-	 * R¼ü
+	 * Ré”®
 	 */
 	public static final int KEY_R = 114;
 	/**
-	 * T¼ü
+	 * Té”®
 	 */
 	public static final int KEY_T = 116;
 	/**
-	 * Y¼ü
+	 * Yé”®
 	 */
 	public static final int KEY_Y = 121;
 	/**
-	 * U¼ü
+	 * Ué”®
 	 */
 	public static final int KEY_U = 117;
 	/**
-	 * I¼ü
+	 * Ié”®
 	 */
 	public static final int KEY_I = 105;
 	/**
-	 * O¼ü
+	 * Oé”®
 	 */
 	public static final int KEY_O = 111;
 	/**
-	 * P¼ü
+	 * Pé”®
 	 */
 	public static final int KEY_P = 112;
 	/**
-	 * [¼ü
+	 * [é”®
 	 */
 	public static final int LEFT_BRACKETS = 91;
 	/**
-	 * ]¼ü
+	 * ]é”®
 	 */
 	public static final int RIGHT_BRACKETS = 93;
 	/**
-	 * \¼ü
+	 * \é”®
 	 */
 	public static final int TURN_BEVEL = 92;
 	/**
-	 * caps lock¼ü
+	 * caps locké”®
 	 */
 	public static final int CAPS_LOCK = 16777298;
 	/**
-	 * A¼ü
+	 * Aé”®
 	 */
 	public static final int KEY_A = 97;
 	/**
-	 * S¼ü
+	 * Sé”®
 	 */
 	public static final int KEY_S = 115;
 	/**
-	 * D¼ü
+	 * Dé”®
 	 */
 	public static final int KEY_D = 100;
 	/**
-	 * F¼ü
+	 * Fé”®
 	 */
 	public static final int KEY_F = 102;
 	/**
-	 * G¼ü
+	 * Gé”®
 	 */
 	public static final int KEY_G = 103;
 	/**
-	 * H¼ü
+	 * Hé”®
 	 */
 	public static final int KEY_H = 104;
 	/**
-	 * J¼ü
+	 * Jé”®
 	 */
 	public static final int KEY_J = 106;
 	/**
-	 * K¼ü
+	 * Ké”®
 	 */
 	public static final int KEY_K = 107;
 	/**
-	 * L¼ü
+	 * Lé”®
 	 */
 	public static final int KEY_L = 108;
 	/**
-	 * ;¼ü
+	 * ;é”®
 	 */
 	public static final int SEMICOLON = 59;
 	/**
-	 * '¼ü
+	 * 'é”®
 	 */
 	public static final int UP_COMMA = 39;
 	/**
-	 * »Ø³µ¼ü
+	 * å›è½¦é”®
 	 */
 	public static final int ENTER = 13;
 	/**
-	 * SHIFT¼ü
+	 * SHIFTé”®
 	 */
 	public static final int SHIFT = 131072;
 	/**
-	 * Z¼ü
+	 * Zé”®
 	 */
 	public static final int KEY_Z = 122;
 	/**
-	 * X¼ü
+	 * Xé”®
 	 */
 	public static final int KEY_X = 120;
 	/**
-	 * C¼ü
+	 * Cé”®
 	 */
 	public static final int KEY_C = 99;
 	/**
-	 * V¼ü
+	 * Vé”®
 	 */
 	public static final int KEY_V = 118;
 	/**
-	 * B¼ü
+	 * Bé”®
 	 */
 	public static final int KEY_B = 98;
 	/**
-	 * N¼ü
+	 * Né”®
 	 */
 	public static final int KEY_N = 110;
 	/**
-	 * M¼ü
+	 * Mé”®
 	 */
 	public static final int KEY_M = 109;
 	/**
-	 * ,¼ü
+	 * ,é”®
 	 */
 	public static final int COMMA = 44;
 	/**
-	 * .¼ü
+	 * .é”®
 	 */
 	public static final int DOT = 46;
 	/**
-	 * /¼ü
+	 * /é”®
 	 */
 	public static final int BEVEL = 47;
 	/**
-	 * CTRL¼ü
+	 * CTRLé”®
 	 */
 	public static final int KEY_CTRL = 262144;
 	/**
-	 * ALT¼ü
+	 * ALTé”®
 	 */
 	public static final int KEY_ALT = 65536;
 	/**
-	 * ÉÏ¼ıÍ·
+	 * ä¸Šç®­å¤´
 	 */
 	public static final int KEY_UP = 16777217;
 	/**
-	 * ÏÂ¼ıÍ·
+	 * ä¸‹ç®­å¤´
 	 */
 	public static final int KEY_DOWN = 16777218;
 	/**
-	 * ×ó¼ıÍ·
+	 * å·¦ç®­å¤´
 	 */
 	public static final int KEY_LEFT = 16777219;
 	/**
-	 * ÓÒ¼ıÍ·
+	 * å³ç®­å¤´
 	 */
 	public static final int KEY_RIGHT = 16777220;
 	/**
-	 * SCROLL¼ü
+	 * SCROLLé”®
 	 */
 	public static final int KEY_SCROLL = 16777300;
 	/**
-	 * PAUSE¼ü
+	 * PAUSEé”®
 	 */
 	public static final int KEY_PAUSE = 16777301;
 	/**
-	 * INSERT¼ü
+	 * INSERTé”®
 	 */
 	public static final int KEY_INSERT = 16777225;
 	/**
-	 * DELETE¼ü
+	 * DELETEé”®
 	 */
 	public static final int KEY_DELETE = 127;
 	/**
-	 * HOME¼ü
+	 * HOMEé”®
 	 */
 	public static final int KEY_HOME = 16777223;
 	/**
-	 * END¼ü
+	 * ENDé”®
 	 */
 	public static final int KEY_END = 16777224;
 	/**
-	 * PAGE UP¼ü
+	 * PAGE UPé”®
 	 */
 	public static final int PAGE_UP = 16777221;
 	/**
-	 * PAGE DOWN¼ü
+	 * PAGE DOWNé”®
 	 */
 	public static final int PAGE_DOWN = 16777222;
 

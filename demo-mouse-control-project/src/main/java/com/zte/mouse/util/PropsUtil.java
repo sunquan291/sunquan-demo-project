@@ -11,14 +11,14 @@ import java.util.Properties;
 
 public class PropsUtil
 {
-    public static final String filePath = "conf/prop.properties";
+    public static final String filePath = "/conf/prop.properties";
 
     public static String readValue(String key)
     {
         Properties props = new Properties();
         try
         {
-            InputStream in = new BufferedInputStream(new FileInputStream(filePath));
+            InputStream in = PropsUtil.class.getResourceAsStream(filePath);
             props.load(in);
             String value = props.getProperty(key);
             return value;

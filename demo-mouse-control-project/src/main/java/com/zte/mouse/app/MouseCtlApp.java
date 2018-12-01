@@ -7,35 +7,26 @@ import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 
-public class MouseControlApp
-{
-
+public class MouseCtlApp {
     protected Shell shell;
     public MousePosSetComposite com;
 
-    public static void main(String[] args)
-    {
-        try
-        {
-            MouseControlApp window = new MouseControlApp();
+    public static void main(String[] args) {
+        try {
+            MouseCtlApp window = new MouseCtlApp();
             window.open();
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public void open()
-    {
+    public void open() {
         Display display = Display.getDefault();
         createContents();
         shell.open();
         shell.layout();
-        while (!shell.isDisposed())
-        {
-            if (!display.readAndDispatch())
-            {
+        while (!shell.isDisposed()) {
+            if (!display.readAndDispatch()) {
                 display.sleep();
             }
         }
@@ -44,23 +35,19 @@ public class MouseControlApp
     /**
      * Create contents of the window.
      */
-    protected void createContents()
-    {
+    protected void createContents() {
         shell = new Shell();
-        shell.addDisposeListener(new DisposeListener()
-        {
+        shell.addDisposeListener(new DisposeListener() {
             @Override
-            public void widgetDisposed(DisposeEvent e)
-            {
+            public void widgetDisposed(DisposeEvent e) {
                 System.exit(0);
             }
         });
         shell.setSize(450, 400);
-        shell.setText(" Û±Íº¸≈Ã≤Ÿ◊˜ƒ£ƒ‚∆˜");
+        shell.setText("ÊéßÂà∂Âè∞");
         shell.setLayout(new FillLayout());
         com = new MousePosSetComposite(shell, SWT.NONE);
         // HotKey key = new HotKey(com);
 
     }
-
 }
