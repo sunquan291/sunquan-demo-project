@@ -4,6 +4,7 @@ import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import com.zte.sunquan.demo.akka.event.APerson;
 import com.zte.sunquan.demo.akka.event.HelloEvent;
+import com.zte.sunquan.demo.akka.event.LookUpBusImpl;
 import org.junit.Test;
 
 import java.util.concurrent.CountDownLatch;
@@ -21,6 +22,18 @@ public class EventTest {
         event.setId(1);
         event.setMsg("hello,world");
         system.eventStream().publish(event);
+        TimeUnit.SECONDS.sleep(4);
+    }
+    @Test
+    public void testLookUpBus() throws InterruptedException {
+        LookUpBusImpl impl=new LookUpBusImpl();
+        ActorSystem system = ActorSystem.create("akka-event-test");
+        ActorRef aPerson = system.actorOf(APerson.props());
+        impl.subscribe(aPerson,"4");
+        HelloEvent event = new HelloEvent();
+        event.setId(4);
+        impl.publish(event);
+
         TimeUnit.SECONDS.sleep(4);
     }
 }

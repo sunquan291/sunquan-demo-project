@@ -7,9 +7,7 @@ import akka.actor.Props;
 public class APerson extends AbstractActor {
     @Override
     public void preStart() throws Exception {
-        ActorSystem system = getContext().getSystem();
-        System.out.println(system.name());
-        getContext().getSystem().eventStream().subscribe(getSelf(), HelloEvent.class);
+//        getContext().getSystem().eventStream().subscribe(getSelf(), HelloEvent.class);
         super.preStart();
     }
 
