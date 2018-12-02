@@ -108,7 +108,6 @@ public class MousePosSetComposite extends Composite {
         new Label(this, SWT.NONE);
         new Label(this, SWT.NONE);
         initHotKey();
-        // ��ʼ���ű�
         initBat();
     }
 

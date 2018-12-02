@@ -30,7 +30,7 @@ public class Person {
 
     private Type type;//对于枚举，默认输出是name
 
-    @JsonUnwrapped(prefix = "user_")
+    //@JsonUnwrapped(prefix = "user_")
     private Sate sate;
 
     public Person(String name, Integer age, Date birthday, String email) {
@@ -51,8 +51,8 @@ public class Person {
 
     public static void main(String[] args) {
         Person person = new Person();
-        person.age(1);
-        person.email("sunquan291@sina.com");
-        person.name("sunquan");
+        //person.age(1);
+//        person.email("sunquan291@sina.com");
+//        person.name("sunquan");
     }
 }
