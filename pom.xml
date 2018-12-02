@@ -20,7 +20,7 @@
         <module>demo-mouse-control-project</module>
     </modules>
     <properties>
-    </properties>
+    </properties> 
 
     <dependencyManagement>
         <dependencies>
